@@ -3,7 +3,14 @@ ASP.NET Core MVC
 
 ```mermaid
 graph LR;
-    DataBase-->Model-->Controller-->View;
+    DataBase-->Model;
+    Model-->DataBase;
+    Model-->Controller;
+    Controller-->Model;
+    Controller-->View;
+    View-->Controller;
+    View-->User;
+    User-->View;
 ```
 ```mermaid
 classDiagram
